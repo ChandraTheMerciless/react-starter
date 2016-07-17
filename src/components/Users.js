@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import * as actions from '../actions/';
 import {bindActionCreators} from 'redux';
 import * as types from '../constants/actionTypes';
+import CreateUser from './CreateUser';
 
 class Users extends React.Component {
   constructor(props) {
@@ -38,7 +39,8 @@ class Users extends React.Component {
               })}
               </ul>
               <button onClick={self.clickHandler}>Test Clicker</button>
-              <button onClick={self.reduxDispatch}>Dispatch</button>
+              <CreateUser dispatchItem={self.reduxDispatch}  />
+
             </div>
     );
   }
